@@ -1,0 +1,26 @@
+#!/bin/bash
+
+VERSION=1.42.0
+PACKAGE=nanoplot
+TOOL=nanoplot
+DIRECTORY=$(dirname $0)
+
+STORAGES=(/ocean /local)
+
+OPTIONS=""
+for STORAGE in "${STORAGES[@]}"
+do
+  	if [ -d "$STORAGE" ]; then
+		OPTIONS=$OPTIONS" -B $STORAGE"
+        fi
+done
+
+if id | grep -q hubmap && [ -d "/hive" ]; then
+	OPTIONS=$OPTIONS" -B /hive"
+fi
+
+if id | grep -q bil && [ -d "/bil" ]; then
+	OPTIONS=$OPTIONS" -B /bil"
+fi
+
+singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif $TOOL "$@"
