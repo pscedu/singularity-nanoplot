@@ -12,7 +12,7 @@ if [ -f $IMAGE ]; then
 	rm -fv $IMAGE
 fi
 
-apptainer build $IMAGE $DEFINITION
+sudo singularity build $IMAGE $DEFINITION
 
 if [ -f $IMAGE ]; then
 	exit 0
