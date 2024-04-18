@@ -26,7 +26,7 @@ To unload the module type
 
 Tools included in this module are
 
-* nanoplot
+* NanoPlot
 ]])
 
 local package = "NanoPlot"
