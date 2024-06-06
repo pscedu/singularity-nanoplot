@@ -1,8 +1,8 @@
 #!/bin/bash
 
 VERSION=1.42.0
-PACKAGE=nanoplot
-TOOL=nanoplot
+PACKAGE=NanoPlot
+TOOL=NanoPlot
 DIRECTORY=$(dirname $0)
 
 STORAGES=(/ocean /local)
