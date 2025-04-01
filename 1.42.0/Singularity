@@ -6,12 +6,12 @@ From: python:latest
     EMAIL icaoberg@psc.edu
     SUPPORT help@psc.edu
     REPOSITORY https://github.com/pscedu/singularity-nanoplot
-    COPYRIGHT Copyright © 2024 Pittsburgh Supercomputing Center. All Rights Reserved.
+    COPYRIGHT Copyright © 2025 Pittsburgh Supercomputing Center. All Rights Reserved.
     VERSION 1.42.0
 
 %post
     apt update
-    pip install NanoPlot
+    pip install NanoPlot --upgrade
 
 %runscript
-    NanoPlot "$@"
+    /usr/local/bin/NanoPlot "$@"

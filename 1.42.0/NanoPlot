@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION=1.42.0
-PACKAGE=NanoPlot
+PACKAGE=nanoplot
 TOOL=NanoPlot
 DIRECTORY=$(dirname $0)
 
